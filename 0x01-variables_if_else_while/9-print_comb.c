@@ -1,33 +1,22 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
-/* betty style doc for function main goes there */
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Entry point
+* Return: Success (0)
+*/
+
 int main(void)
 {
-	int i;
-
-	i = 48;
-	while  (i < 58)
-	{
-		putchar(i);
-		if (i !=  57)
-		{
-			putchar(44);
-			putchar(32);
-			i++;
-		}
-		else
-		{
-			i++;
-		}
-	}
-	putchar('\n');
-
-	return (0);
+int i = 48;
+while (i <= 57)
+{
+putchar(i);
+if (i != 57)
+{
+putchar(44);
+}
+putchar(32);
+i++;
+}
+putchar('\n');
+return (0);
 }
