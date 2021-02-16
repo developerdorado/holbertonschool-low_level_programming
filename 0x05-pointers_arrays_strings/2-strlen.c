@@ -6,14 +6,15 @@
  * Return: Sizeof of a string
 */
 
+
 int _strlen(char *s)
 {
-	int c;
+    int i;
+    i = 0;
 
-	for (*s != '\0'; *s++)
-	{
-		c++;
-	}
-
-	return (c);
+    while (s[i] != '\0')
+    {
+	i++;
+    }
+    return (i);
 }
