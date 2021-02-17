@@ -1,21 +1,45 @@
-#include "holberton.h"
+include "holberton.h"
 
 /**
- * _strcpy - Copies a string pointed to by @src, including the
- *           terminating null byte, to a buffer pointed to by @dest.
- * @dest: A buffer to copy the string to.
- * @src: The source string to copy.
- * Return: A pointer to the destination string @dest.
+ * _strlen - returns the length of a given string
+ *
+ *
+ * @s: string to check the length of
+ * Return: returns the length of the string
  */
-char *_strcpy(char *dest, const char *src)
+int _strlen(char *s)
 {
-	int index = 0;
+	int i;
 
-	while (src[index])
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+/**
+ * _strcpy - copies an entire string to a buffer
+ *
+ *
+ * @src: source string to copy
+ * @dest: buffer to copy string into
+ * Return: returns pointer to copied string
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+	char *retval;
+
+	i = 0;
+	while (src[i] != '\0')
 	{
-		dest[index] = src[index];
-		index++;
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = src[i];
 
-	return (dest);
+	retval = dest;
+
+	return (retval);
 }
